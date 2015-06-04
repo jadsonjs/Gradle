@@ -1,0 +1,8 @@
+# all class files
+*.class
+
+#the output of eclipse 
+/bin/
+
+#the output of gredle
+/build/
