@@ -1,0 +1,47 @@
+apply plugin: "java"
+
+/* Define source code verstion */
+sourceCompatibility = 1.8
+
+/* Define the version of the  application (name of the jar)*/
+version = '1.0-snapshot'
+
+/* Configure the project layout by configuring the appropriate source set. */
+sourceSets {
+    main {
+        java {
+            srcDir 'src'
+            srcDir 'src2'
+        }
+    	
+        resources {
+         	srcDir 'src'
+            srcDir 'src2'
+        }
+    }
+    
+    test {
+    	java {
+            srcDir 'src_test'
+            srcDir 'src2_test'
+        }
+     }
+}
+
+/* Information about inside manifest file*/
+jar{
+    manifest {
+        attributes 'Implementation-Title': 'First Grandle Project',
+                   'Implementation-Version': '1.0.0'    
+    }
+}
+
+/* Define repositories used by the project */
+repositories { 	mavenCentral() }
+ 
+ 
+/*  Define dependences of the file */ 
+dependencies {
+	testCompile 'junit:junit:4.12'
+}
+
