@@ -1,8 +1,13 @@
 # all class files
 *.class
+*.jar
+*.ear
+*.war
+*.bin
 
-#the output of eclipse 
-/bin/
+# Ignore output of eclipse
+bin/
 
-#the output of gredle
-/build/
+# Ignore gradle files
+.gradle/
+build/
