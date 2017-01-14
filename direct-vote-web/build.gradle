@@ -1,0 +1,33 @@
+// Apply the java plugin to add support for Java
+apply plugin: 'java'
+
+// Apply the eclipse plugin to configura the file in eclipse
+apply plugin: 'eclipse'
+
+// Apply the war plugin to configura the war file
+apply plugin: 'war'
+
+group = 'com.jadson'
+version = '1.0-SNAPSHOT'
+// The name of the web application source directory, relative to the project directory. 
+webAppDirName = 'src/main/resources'
+
+
+
+// In this section you declare where to find the dependencies of your project
+repositories {
+    mavenCentral()
+    mavenLocal()
+    jcenter()
+}
+
+dependencies {
+	compile project(':direct-vote-business')
+    // The production code uses Guava
+    compile 'com.google.guava:guava:20.0'
+
+    // Use JUnit test framework
+    testCompile 'junit:junit:4.12'
+}
+
+
