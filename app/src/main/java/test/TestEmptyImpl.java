@@ -18,8 +18,11 @@ public class TestEmptyImpl implements TesteEmpty{
 	 */
 	@Override
 	public boolean verify(String s) {
-		System.out.println(StringUtils.isEmpty(""));
-		return false;
+		System.out.println(StringUtils.isEmpty(s));
+		return StringUtils.isEmpty(s);
 	}
 
+	public static void main(String[] args) {
+		new TestEmptyImpl().verify("test");
+	}
 }

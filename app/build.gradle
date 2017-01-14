@@ -1,6 +1,14 @@
 apply plugin: "java"
 apply plugin: "eclipse"
 
+
+jar {
+	manifest {
+    	attributes 'Main-Class': 'test.TestEmptyImpl'
+	}
+}
+
+
 repositories {
     mavenCentral()
 }
