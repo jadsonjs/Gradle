@@ -1,19 +1,25 @@
-apply plugin: "java"
-apply plugin: "eclipse"
 
+// apply general configurations to all projects //
+allprojects {
+	group = 'com.jadson'
+	version = '1.0-SNAPSHOT'
+}
 
-jar {
-	manifest {
-    	attributes 'Main-Class': 'test.TestEmptyImpl'
+// apply  general configurations to all subprojects //
+subprojects {
+	apply plugin: 'java'
+    apply plugin: 'eclipse'
+    apply plugin: 'maven-publish'
+    
+    repositories {
+    	mavenLocal()
+    	mavenCentral()
+    	jcenter()
+    }
+    
+    dependencies {
+		testCompile group: 'org.hamcrest', name: 'hamcrest-all', version: '1.3'
+    	testCompile 'junit:junit:4.12'
 	}
 }
 
-
-repositories {
-    mavenCentral()
-}
-
-dependencies {
-      compile project(':common')
-      compile project(':api')
-}

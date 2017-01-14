@@ -1,0 +1,14 @@
+
+
+jar {
+	manifest {
+    	attributes 'Main-Class': 'test.TestEmptyImpl'
+	}
+}
+
+
+dependencies {
+      compile project(':common')
+      compile project(':api')
+}
+
