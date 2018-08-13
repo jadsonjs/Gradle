@@ -16,10 +16,5 @@ pipeline {
         build 'continuous delivery Deploy'
       }
     }
-    stage('End') {
-      steps {
-        echo 'THE END'
-      }
-    }
   }
 }
